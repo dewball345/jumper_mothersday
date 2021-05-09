@@ -196,7 +196,7 @@ function game_loop() {
         return;
     }
     // console.log("SOMEHOW STOP IS TRUE")
-    anim = window.requestAnimationFrame(game_loop)
+    setTimeout(() => {anim = window.requestAnimationFrame(game_loop)}, 1000/60)
     ctx.clearRect(0, 0, canvas.width, canvas.height); 
     
     rect(0, 0, canvas.width, canvas.height, BACKGROUND_COLOR)
