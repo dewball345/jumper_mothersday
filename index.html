@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <style>
+            #canvas{
+                border: 5px solid black;
+                border-radius: 5px;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-sm d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="row">
+                <div class="col-sm d-flex flex-column justify-content-center">
+                    <h2 class="text-center">Jumper</h2>
+                    <h4 class="fw-light text-center">A mother's day game for my mom, Suma</h4>
+                    <!-- <h6 class="fw-lighter">For my mom, Suma</h6> -->
+                    <div class="d-flex justify-content-center">
+                        <canvas id="canvas">
+                            
+                        </canvas>
+                    </div>
+                    <!-- <canvas id="canva2s" width="100" height="100"></canvas> -->
+                    <!-- <h5 class="m-2 fw-lighter" id="test">-</h5> -->
+                    <!-- <div class="row"> -->
+                        <!-- <button id="bj" class="col-sm btn btn-primary m-2" onclick="jump(); document.getElementById('bj').blur();">jump</button> -->
+                    <button id="brs" class="btn btn-success m-2 btn-lg" onclick="stopstart(); document.getElementById('brs').blur();">
+                        (Re)start the game
+                    </button>
+                    <!-- </div> -->
+                    <script src="index.js"></script>
+                </div>
+                <div class="col-sm m-2">
+                    <h2>Rules:</h2>
+                    <ul>
+                        <li>Click or press space to jump</li>
+                        <li>You can "stand" on green tiles but you cannot run into them from the side.</li>
+                        <li>Also, if you fall from a long distance, you MAY lose. This is technically a bug but i'll call it a feature</li>
+                        <li>Your score is the amount of time you stay afloat. If you lose, a nice message will await you</li>
+                    </ul>
+                </div>               
+            </div>
+        </div>
+    </body>
+</html>
